@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
+    <style>
+        html {
+            font-size: 26.67vw;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .one {
+            width: 100%;
+            background: url(./image/1.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .myresume {
+            width: 100%;
+            height: 1rem;
+            margin-top: 2.6rem;
+        }
+
+        .myresume>li {
+            width: 100%;
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.5rem;
+            line-height: 1rem;
+            text-align: center;
+        }
+
+        .anction {
+            width: 100%;
+            height: 0.7rem;
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .anction>li {
+            width: 2rem;
+            height: 0.4rem;
+            margin: 0 auto;
+            top: 0.15rem;
+            background: url(./image/anction.png) no-repeat;
+            background-position: center center;
+            animation: move 3s infinite;
+        }
+
+        @keyframes move {
+            0% {
+                margin-top: -0.2rem;
+            }
+            50% {
+                margin-top: 0;
+            }
+            100% {
+                margin-top: -0.2rem;
+            }
+        }
+
+        .two {
+            width: 100%;
+            background: url(./image/2.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .logo {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .logo>li {
+            width: 1.3rem;
+            height: 1.3rem;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: url(./image/logo.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .resume {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .resume>li {
+            width: 100%;
+            height: 0.4rem;
+            transform: translateY(4rem);
+            background-color: #fff;
+            opacity: 0.8;
+            font-size: 0.2rem;
+            margin-top: 0.1rem;
+            text-align: center;
+            line-height: 0.4rem;
+            opacity: 0;
+        }
+
+        .resume>li.lis:nth-child(1) {
+            transition: all 1s ease-out 500ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis:nth-child(2) {
+            transition: all 1s ease-out 1000ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis:nth-child(3) {
+            transition: all 1s ease-out 1500ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis:nth-child(4) {
+            transition: all 1s ease-out 2000ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis:nth-child(5) {
+            transition: all 1s ease-out 2500ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis:nth-child(6) {
+            transition: all 1s ease-out 3000ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis:nth-child(7) {
+            transition: all 1s ease-out 3500ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis:nth-child(8) {
+            transition: all 1s ease-out 4000ms;
+            /* ease-out 由快到满 */
+        }
+
+        .resume>li.lis {
+            transform: translate(0);
+            opacity: 1;
+        }
+
+        .xm-one {
+            width: 100%;
+            background: url(./image/3-1.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .task {
+            width: 100%;
+            height: 0.7rem;
+            font-size: 0.4rem;
+            text-align: center;
+            line-height: 0.7rem;
+            color: #fff;
+        }
+
+        .task1 {
+            width: 100%;
+            height: 0.7rem;
+            font-size: 0.2rem;
+            text-align: center;
+            line-height: 0.7rem;
+            color: #fff;
+        }
+
+        .task2 {
+            width: 100%;
+            height: 0.7rem;
+            font-size: 0.2rem;
+            text-align: center;
+            line-height: 0.7rem;
+        }
+
+        .project1 {
+            width: 100%;
+        }
+
+        .project1>li {
+            width: 100%;
+            margin-top: 0.38rem;
+            transform: translateX(4rem);
+            background-color: #ccc;
+            font-size: 0.2rem;
+            opacity: 0;
+        }
+        .project1>li.lid:nth-child(1){
+            transition: all 1s ease-out 500ms;
+            /* ease-out 由快到满 */
+        }
+        .project1>li.lid:nth-child(2){
+            transition: all 1s ease-out 1000ms;
+            /* ease-out 由快到满 */
+        }
+        .project1>li.lid:nth-child(3){
+            transition: all 1s ease-out 1500ms;
+            /* ease-out 由快到满 */
+        }
+        .project1>li.lid:nth-child(4){
+            transition: all 1s ease-out 2000ms;
+            /* ease-out 由快到满 */
+        }
+        .project1>li.lid{
+            transform: translate(0);
+            opacity: 1;
+        }
+        .xm-two {
+            width: 100%;
+            background: url(./image/3-2.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .project2 {
+            width: 100%;
+        }
+
+        .project2>li {
+            width: 100%;
+            margin-top: 0.45rem;
+            background-color: #ccc;
+            font-size: 0.2rem;
+        }
+
+        .xm-three {
+            width: 100%;
+            background: url(./image/3-3.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .project3 {
+            width: 100%;
+        }
+
+        .project3>li {
+            width: 100%;
+            margin-top: 0.38rem;
+            background-color: #ccc;
+            font-size: 0.2rem;
+        }
+
+        .xm-four {
+            width: 100%;
+            background: url(./image/3-4.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .project4 {
+            width: 100%;
+        }
+
+        .project4>li {
+            width: 100%;
+            margin-top: 0.45rem;
+            background-color: #ccc;
+            font-size: 0.2rem;
+        }
+
+        .project5 {
+            width: 100%;
+        }
+
+        .project5>li {
+            width: 100%;
+            margin-top: 0.3rem;
+            background-color: #ccc;
+            font-size: 0.2rem;
+        }
+
+        .xm-five {
+            width: 100%;
+            background: url(./image/3-5.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .four {
+            width: 100%;
+            background: url(./image/4.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .exper {
+            width: 100%;
+        }
+
+        .exper>li {
+            width: 100%;
+            margin-top: 0.2rem;
+            color: yellowgreen;
+            font-size: 0.2rem;
+        }
+
+        .five {
+            width: 100%;
+            background: url(./image/5.jpg) no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    </style>
+
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/jquery.fullPage.min.js"></script>
+</head>
+
+<body>
+    <div id="sucaihuo">
+        <div class="section one">
+            <ul class="myresume">
+                <li>个人简历</li>
+            </ul>
+            <ul class="anction">
+                <li></li>
+            </ul>
+        </div>
+        <div class="section two">
+            <ul class="logo">
+                <li></li>
+            </ul>
+            <ul class="resume">
+                <li>基本信息:</li>
+                <li>姓名:张思博</li>
+                <li>性别:男</li>
+                <li>年龄:23</li>
+                <li>期望职业:web前端开发工程师</li>
+                <li>主要使用技术:h5,c3,js</li>
+                <li>熟练技术：vue,react,php</li>
+                <li>了解技术：angular,java,微信小程序开发</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="slide xm-one">
+                <ul class="task">
+                    <li>项目经验1</li>
+                </ul>
+                <ul class="project1">
+                    <li>个人博客</li>
+                    <li>简介:个人的博客，主要用来发表文章，分享经验，言论相对自由</li>
+                    <li>主要运用的技术：H5、C3、PHP及MySQL</li>
+                    <li>主要负责：运用h5，c3完成注册，登录和文章详情页的布局，并运用PHP以及MySQL数据库完善注册和登录的功能 以及文章接口的调用，详情页的评论功能等，项目后期的维护与监督
+                    </li>
+                </ul>
+            </div>
+            <div class="slide xm-two">
+                <ul class="task">
+                    <li>项目经验2</li>
+                </ul>
+                <ul class="project2">
+                    <li>贝思客蛋糕</li>
+                    <li>简介:贝思客蛋糕的官网，主要用于蛋糕等食品的在线销售</li>
+                    <li>主要运用的技术：H5、C3、React、cms</li>
+                    <li>主要负责：运用h5，c3布局，运用react-router-dom实现整个项目的页面跳转，部分效果的实现，如轮播，选项卡等以及项目后期的优化以及完善</li>
+                </ul>
+            </div>
+            <div class="slide xm-three">
+                <ul class="task">
+                    <li>项目经验3</li>
+                </ul>
+                <ul class="project3">
+                    <li>豆瓣电影</li>
+                    <li>简介:豆瓣电影的微信小程序，实时获取最新电影等信息</li>
+                    <li>主要运用的技术：微信小程序开发，内置路由跳转等</li>
+                    <li>主要负责：页面布局，Tabbar页面切换，路由的跳转，版本的兼容以及调用API获取实时数据等以及后期数据的更新</li>
+                </ul>
+            </div>
+            <div class="slide xm-four">
+                <ul class="task">
+                    <li>项目经验4</li>
+                </ul>
+                <ul class="project4">
+                    <li>艺龙</li>
+                    <li>简介:艺龙是一款针对旅游介绍，名胜古迹及宾馆开发的一款网站</li>
+                    <li>主要运用的技术：H5,C3,VUE axios</li>
+                    <li>主要负责：使用vue框架完成MVC模式的开发，利用axios与后台进行交互，利用组件化完成页面基本布局，使用div+css完成页面基本搭建</li>
+                </ul>
+            </div>
+            <div class="slide xm-five">
+                <ul class="task">
+                    <li>项目经验5</li>
+                </ul>
+                <ul class="project5">
+                    <li>东风起亚-k4</li>
+                    <li>简介:该项目是针对东风起亚-k4开发的一个移动端广告，各地供应商都可以通过公众号推广的方式吸引前来了解车型的客户</li>
+                    <li>主要运用的技术：移动端布局，ajax获取数据，canvas等</li>
+                    <li>主要负责：负责车身，发动机，车型模块的开发，使用rem进行移动端适配，使用CSS3中的animation动画属性和transition过度实现页面动态效果，通过H5中的sessionStorage和localStorage实现本地缓存，通过ajax获取后台数据实现三级联动效果，使用canvas画布制作视频，使图片流畅播放无卡顿</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section four">
+            <ul class="task1">
+                <li>个人履历&&自我评价</li>
+            </ul>
+            <ul class="exper">
+                <li>工作时间：2016年至今就职于北京爱知科技有限公司</li>
+                <li>个人履历：本人于16年7月正式大学毕业，毕业后首先进入的是九章云极科技有限公司实习，三个月后至北京爱知科技有限公司工作至今 期间主要负责配合前端框架实现页面布局，部分效果的实现，微信小程序的开发以及运用PHP编写简单的页面接口，在爱知科技公司了解到了java技术，并参与了一些简单的Java项目开发，最终因个人原因离职
+                </li>
+                <li>自我评价：本人性格开朗、稳重、有活力，待人热情、真诚；对待工作认真负责，善于沟通、协调有较强的组织能力与团队精神；对代码有热情，有钻研精神，抗压能力强；业余爱好打打篮球，乒乓球，羽毛球，弹弹吉他等</li>
+            </ul>
+        </div>
+        <div class="section five">
+            <ul class="task2">
+                <li>后记</li>
+                <li>如果您对我有意向，请联系我</li>
+                <li>联系电话：17600776128</li>
+                <li>邮箱❤：17600776128@163.com</li>
+            </ul>
+        </div>
+    </div>
+    <a href="#" style="display: none;">sucaihuo</a>
+    <a href="#" style="display: none;">jQuery全屏滚动插件fullPage.js</a>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
